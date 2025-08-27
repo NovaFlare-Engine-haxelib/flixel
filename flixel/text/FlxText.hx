@@ -635,11 +635,10 @@ class FlxText extends FlxSprite
 	{
 		if (allowStop && text == Text)
 		{
-			// trace('stopUpdate');
 			return Text;
 		}
 		text = Text;
-		if (textField != null)
+		if (textField != null && Text != null)
 		{
 			var ot:String = textField.text;
 			textField.text = Text;

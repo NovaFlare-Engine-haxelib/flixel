@@ -215,6 +215,7 @@ class FlxText extends FlxSprite
 	public function new(X:Float = 0, Y:Float = 0, FieldWidth:Float = 0, ?Text:String, Size:Int = 8, EmbeddedFont:Bool = true)
 	{
 		super(X, Y);
+		if (Size <= 0) Size = 1; //诶哟我去有些神人写的hscript都是什么狗屎代码
 
 		if (Text == null || Text == "")
 		{

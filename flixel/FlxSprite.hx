@@ -271,6 +271,11 @@ class FlxSprite extends FlxObject
 	public var useColorTransform(default, null):Bool = false;
 
 	/**
+	 * 用于lua获取图像加载到的文件名，进行检测
+	 */
+	public var imageName:String;
+
+	/**
 	 * Clipping rectangle for this sprite.
 	 * Changing the rect's properties directly doesn't have any effect,
 	 * reassign the property to update it (`sprite.clipRect = sprite.clipRect;`).

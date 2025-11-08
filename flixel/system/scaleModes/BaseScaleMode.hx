@@ -65,7 +65,8 @@ class BaseScaleMode
 			case FlxHorizontalAlign.LEFT:
 				0;
 			case FlxHorizontalAlign.CENTER:
-				Math.ceil((deviceSize.x - gameSize.x) * 0.5);
+				// 使用向下取整，避免奇数差值在居中时造成 1px 偏差
+				Math.floor((deviceSize.x - gameSize.x) * 0.5);
 			case FlxHorizontalAlign.RIGHT:
 				deviceSize.x - gameSize.x;
 		}
@@ -78,7 +79,8 @@ class BaseScaleMode
 			case FlxVerticalAlign.TOP:
 				0;
 			case FlxVerticalAlign.CENTER:
-				Math.ceil((deviceSize.y - gameSize.y) * 0.5);
+				// 使用向下取整，避免奇数差值在居中时造成 1px 偏差
+				Math.floor((deviceSize.y - gameSize.y) * 0.5);
 			case FlxVerticalAlign.BOTTOM:
 				deviceSize.y - gameSize.y;
 		}

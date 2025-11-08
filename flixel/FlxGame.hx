@@ -297,6 +297,11 @@ class FlxGame extends Sprite
 		addEventListener(Event.ADDED_TO_STAGE, create);
 	}
 
+	public function setInitialState(initialState:InitialState):Void
+	{
+		_initialState = initialState.toNextState();
+	}
+
 	/**
 	 * Sets the filter array to be applied to the game.
 	 */
